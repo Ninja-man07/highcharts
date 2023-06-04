@@ -6,6 +6,19 @@ This file outlines the guidelines for contributing source code to the Highcharts
 as well as writing good issue reports.
 
 ## Contents
+const request = require('request');
+
+const options = {
+  method: 'DELETE',
+  url: 'https://circleci.com/api/v2/context/%7Bcontext-id%7D',
+  headers: {authorization: 'Basic REPLACE_BASIC_AUTH'}
+};
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  console.log(body);
+});
 
 [Reporting Bugs](#reporting-bugs)
 [Suggesting Features and/or Enhancements](#suggesting-features-and-enhancements)
